@@ -4,7 +4,7 @@
 
 This is a simple app using the <a href="https://platform.openai.com/docs/api-reference/">OpenAI API</a> to give cute dino answers to user inputs.
 
-![screenshot](./public/screenshot.jpg "screenshot")
+![screenshot](./public/screenshot.png "screenshot")
 
 ## Features
 
