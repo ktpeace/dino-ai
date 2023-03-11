@@ -7,7 +7,7 @@ function App() {
   const [dino, setDino] = useState("🦕");
   const [dinoName, setDinoName] = useState("Sauropod");
   const [dinoPrompt, setDinoPrompt] = useState(
-    "Answer creatively like a brontosaurus, possibly adding munching sounds"
+    "Answer creatively like a brontosaurus, maybe add herbivore sounds (do not roar):"
   );
   const [prompt, setPrompt] = useState("");
   const [reply, setReply] = useState("");
@@ -18,13 +18,13 @@ function App() {
       setDino("🦕");
       setDinoName("Sauropod");
       setDinoPrompt(
-        "Answer creatively like a brontosaurus, possibly adding munching sounds"
+        "Answer creatively like a brontosaurus, maybe add herbivore sounds (do not roar):"
       );
     } else {
       setDino("🦖");
       setDinoName("T-rex");
       setDinoPrompt(
-        "Answer creatively like a t-rex, possibly adding tearing sounds:"
+        "Answer creatively like a t-rex, maybe add tearing sounds:"
       );
     }
   }
