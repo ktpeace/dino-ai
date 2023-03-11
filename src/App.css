@@ -1,9 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
+html,
+body {
+  margin: 0;
+}
+
 body {
   background-color: black;
   color: white;
   font-family: "Varela Round", sans-serif;
+}
+
+.push-footer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .App {
@@ -56,4 +68,19 @@ button:hover {
 
 .reply {
   max-width: 75%;
+  word-wrap: break-word;
+}
+
+footer {
+  border-top: 2px solid rgb(24, 24, 24);
+  color: rgb(89, 89, 89);
+  /* text-transform: uppercase; */
+  margin-top: auto;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(24, 102, 24);
 }

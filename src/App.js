@@ -24,7 +24,7 @@ function App() {
       setDino("🦖");
       setDinoName("T-rex");
       setDinoPrompt(
-        "Answer creatively like a t-rex, maybe add tearing sounds:"
+        "Answer creatively like a t-rex (you can roar, but say more than just that):"
       );
     }
   }
@@ -56,20 +56,33 @@ function App() {
       .catch((error) => console.error(error));
   }
 
+  function onKeyDown(event) {
+    if (event.key === "Enter") getReply();
+  }
+
   return (
-    <main className="App">
-      <h1>Dino OpenAI</h1>
-      <p className="intro-p">Get a dino answer to any question!</p>
-      <input
-        placeholder="What is the rain like in Spain?"
-        onChange={(e) => setPrompt(e.target.value)}
-      ></input>
-      <button onClick={getReply}>Ask the {dinoName}</button>
-      <span onClick={toggleDino} className="dino">
-        {dino}
-      </span>
-      <p className="reply">"{reply}"</p>
-    </main>
+    <div className="push-footer">
+      <main className="App">
+        <h1>Dino OpenAI</h1>
+        <p className="intro-p">Get a dino answer to any question!</p>
+        <input
+          placeholder="What is the rain like in Spain?"
+          onChange={(e) => setPrompt(e.target.value)}
+          onKeyDown={onKeyDown}
+        ></input>
+        <button onClick={getReply}>Ask the {dinoName}</button>
+        <span onClick={toggleDino} className="dino">
+          {dino}
+        </span>
+        <p className="reply">"{reply}"</p>
+      </main>
+      <footer>
+        Made by{" "}
+        <a href="https://github.com/ktpeace" target="_blank" rel="noreferrer">
+          Kat
+        </a>
+      </footer>
+    </div>
   );
 }
 
